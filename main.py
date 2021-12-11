@@ -70,4 +70,7 @@ def number_of_pages(word):
     button = str(soup_buttons[index])
     return int(button[(button.rfind('=') + 1):button.rfind('"')])
 
-print(define('brazil'))
+# EXAMPLES:
+# define('Brazil')
+# define('Adultification')
+# define('Donald trump'[0]['def'])
