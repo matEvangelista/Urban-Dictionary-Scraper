@@ -9,7 +9,7 @@ def define(word):
     definitions = []
     if more_than_one_page(word):
         # this string is absolutely necessary, since 'word&page=n' may change to 'WORD&page=n' or 'Word&page=n'
-        string = returns_soup(word).find('div', class_="def-header").text
+        string = returns_soup(word).find('div', class_="mb-8 flex").text
         for i in range(1, number_of_pages(word) + 1):
             if i == 1:
                 soup = returns_soup(word)
@@ -72,5 +72,5 @@ def number_of_pages(word):
 
 # EXAMPLES:
 # define('Brazil')
-# define('Adultification')
-# define('Donald trump'[0]['def'])
+# print(define('Adultification'))
+# print(define('Botswana')[0]['def'])
