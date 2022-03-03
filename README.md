@@ -19,8 +19,8 @@ print(define('Rio de Janeiro')[1])
 ```
 {'def': '1.) A good city with HOT WOMEN, but a very LARGE crime rate. They were thinking about putting up a wall to trap escaping bullets from the downtown area of the city, but instead lifted all speed limits so that travelers could go faster without being shot.', 'ex': "Brazilian A: Let's do a driveby!\r\nBrazilian B: We can't since the speed limit was lifted. People drive way to fast, and I can't even hit them\r\nBrazilian A: Fuck you, man"}
 ```
-If your goal is to only select a definition or an example, you may run ```define('Rio de Janeiro')[1]['def'] ``` or
-```define('Rio de Janeiro')[1]['ex']```.\
+If your goal is to only select a definition or an example, you may run ```define('Rio de Janeiro')[1]['def']``` or
+```define('Rio de Janeiro')[1]['ex']```.
 
 
 ## Terms that have more than one page
