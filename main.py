@@ -10,15 +10,13 @@ def define(word):
     if more_than_one_page(word):
         # this string is absolutely necessary, since 'word&page=n' may change to 'WORD&page=n' or 'Word&page=n'
         string = returns_soup(word).find('div', class_="mb-8 flex").text
-        for i in range(1, number_of_pages(word) + 1):
-            if i == 1:
-                soup = returns_soup(word)
-                definitions += soup.find_all('div', class_='meaning')
-                examples += replace_br(soup.find_all('div', class_='example'))
-            else:
-                soup = returns_soup(string + f'&page={i}')
-                definitions += soup.find_all('div', class_='meaning')
-                examples += replace_br(soup.find_all('div', class_='example'))
+        soup = returns_soup(word)
+        definitions += soup.find_all('div', class_='meaning')
+        examples += replace_br(soup.find_all('div', class_='example'))
+        for i in range(2, number_of_pages(word) + 1):
+            soup = returns_soup(string + f'&page={i}')
+            definitions += soup.find_all('div', class_='meaning')
+            examples += replace_br(soup.find_all('div', class_='example'))
     else:
         soup = returns_soup(word)
         definitions += soup.find_all('div', class_='meaning')  # list of every definition found on the page
@@ -74,3 +72,4 @@ def number_of_pages(word):
 # define('Brazil')
 # print(define('Adultification'))
 # print(define('Botswana')[0]['def'])
+print(define('south africa'))
