@@ -72,4 +72,4 @@ def number_of_pages(word):
 # define('Brazil')
 # print(define('Adultification'))
 # print(define('Botswana')[0]['def'])
-print(define('south africa'))
+# print(define('south africa')[1]['ex'])
