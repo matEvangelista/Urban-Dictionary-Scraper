@@ -50,7 +50,7 @@ def replace_br(examples):
 
 
 def more_than_one_page(word):
-    """Function that returns the number of pages a word has"""
+    """Function that returns if a term was more than one page of definitions and examples"""
     soup = returns_soup(word)
     soup_buttons = soup.find_all('a')
     for button in soup_buttons:
